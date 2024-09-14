@@ -47,6 +47,7 @@ function PageHook() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenModel, setIsOpenModel] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [priority, setPriority] = useState(null);
 
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
@@ -91,11 +92,11 @@ function PageHook() {
   const onSubmit = async (data) => {
     //console.log(data);
   
-    console.log(data  )
+   // console.log(data  )
     const waitlist_id = 12345;
     const joiner={
       email:data.email,
-      waitlist_id:12345
+      waitlist_id:20365
     }
     try {
       let res = await fetch("https://api.getwaitlist.com/api/v1/signup", {
@@ -105,7 +106,10 @@ function PageHook() {
       },
         body: JSON.stringify(joiner),
       });
-      console.log(res);
+      const jsond = await res.json();
+      // let resp= await fetch('https://api.getwaitlist.com/api/v1/waitlist?waitlist_id=20365')
+       console.log(jsond);
+       setPriority(jsond.priority)
       if (res.ok) {
         reset();
         handleOpenModel();
@@ -306,6 +310,7 @@ function PageHook() {
             <RecievedModal
               isOpenModel={isOpenModel}
               setIsOpenModel={setIsOpenModel}
+              priority={priority}
             />
           </div>
         </div>
@@ -378,7 +383,7 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
     </AnimatePresence>
   );
 };
-const RecievedModal = ({ isOpenModel, setIsOpenModel }) => {
+const RecievedModal = ({ isOpenModel, setIsOpenModel,priority }) => {
   return (
     <AnimatePresence>
       {isOpenModel && (
@@ -415,15 +420,16 @@ const RecievedModal = ({ isOpenModel, setIsOpenModel }) => {
 
             <div className="relative z-10">
               <p className=" text-center text-lg mt-4  mb-6">
-                We'll send a notification as soon as v0 is ready for you to
+              You're number <strong>{priority}</strong> in line for exclusive access We'll send a notification as soon as v0 is ready for you to
                 experience
               </p>
+              
               <div className="flex gap-2">
                 <button
                   onClick={() => setIsOpenModel(false)}
                   className=" flex justify-center gap-x-3 items-center bg-transparent bg-white text-black hover:bg-neutral-300  transition-colors duration-200 dark:text-black font-semibold w-60 mx-auto py-2 rounded px-8"
                 >
-                  <span>Happy Coding</span>
+                  <span>Happy Waiting!</span>
                   <Image
                     width={7}
                     height={7}
