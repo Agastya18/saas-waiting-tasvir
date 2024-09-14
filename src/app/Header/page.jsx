@@ -7,6 +7,7 @@ import img2 from '../img/xx.png'
 import img3 from '../img/github.png'
 import Link from "next/link";
 import Image from "next/image";
+import logo from '../img/logo.png'
 import { useTheme } from "next-themes";
 
 import {
@@ -146,9 +147,9 @@ function Headpage() {
       <div className="flex justify-between md:max-w-5xl max-w-lg mx-auto lg:mt-16 mt-11 md:px-8 px-9">
         <div className="flex gap-x-3 items-center">
         <p className="text-sm text-white hidden md:block">
-            TasvirAi
+           <Image src={logo} alt="" className="  w-16 h-16"/>
           </p>
-          <Switch checked={checked} setChecked={setChecked} />
+          {/* <Switch checked={checked} setChecked={setChecked} /> */}
           
         </div>
 
@@ -218,6 +219,9 @@ function Headpage() {
               </Link>
             </div>
           ))}
+        </div>
+        <div>
+        <Switch checked={checked} setChecked={setChecked} />
         </div>
       </div>
     </>

@@ -10,7 +10,7 @@ import img3 from './img/got.png'
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import shortid from "shortid";
+
 
 import {
   AnimatePresence,
@@ -180,7 +180,7 @@ function PageHook() {
             <h1 className="text-3xl font-bold  sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent dark:bg-gradient-to-r bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-800 capitalize md:max-w-2xl lg:max-w-3xl mx-auto ">
             Be First to Experience Face-Exclusive Photo Access!
             </h1>
-            <p className="max-w-[600px]  leading-7 text-center text-[16px] bg-clip-text text-transparent dark:bg-gradient-to-br bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-700 mx-auto ">
+            <p className="max-w-[600px]    leading-7 text-center text-[16px] bg-clip-text text-transparent dark:bg-gradient-to-br bg-gradient-to-tr dark:from-white from-black to-neutral-600 dark:to-neutral-700 mx-auto ">
             A privacy-first platform for securely uploading photos from events, trips, or linking your Google Drive. Share effortlessly with QR codes or links, while advance facial recognition ensures everyone accesses only their personal memories.
 
             </p>
@@ -194,7 +194,7 @@ function PageHook() {
           <div className="w-full   space-y-2 ">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col lg:flex-row mx-auto lg:space-x-2 max-w-lg"
+              className="flex flex-col    mt-5 lg:flex-row mx-auto lg:space-x-2 max-w-lg"
             >
            
 
