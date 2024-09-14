@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: InterBlack;
+  src: url("../app/fonts/Inter_18pt-Black.ttf");
+}
+@font-face {
+  font-family: InterBold;
+  src: url("../app//fonts//Inter_18pt-Bold.ttf");
+}
+@font-face {
+  font-family: InterMedium;
+  src: url("../app//fonts//Inter_18pt-Medium.ttf");
+}
+@font-face {
+  font-family: InterRegular;
+  src: url("../app//fonts//Inter_18pt-Regular.ttf");
+}
+
+@layer base {
+  body {
+    @apply dark:bg-[#07070A] bg-[#ffffff] transition-all ease-in duration-200;
+  }
+}
