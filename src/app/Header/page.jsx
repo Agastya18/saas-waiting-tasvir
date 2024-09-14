@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import img1 from '../img/in.png'
 import img2 from '../img/xx.png'
-import img3 from '../img/github.png'
+import img3 from '../img/medium.png'
 import Link from "next/link";
 import Image from "next/image";
 import logo from '../img/logo2.png'
@@ -103,13 +103,13 @@ const people = [
     image:img2,
     href: "https://x.com/GaurAgastya",
   },
-  {
-    id: 3,
-    name: "GITHUB",
-    designation: "agastya18",
-    image: img3,
-    href: "https://github.com/agastya18",
-  },
+  // {
+  //   id: 3,
+  //   name: "GITHUB",
+  //   designation: "agastya18",
+  //   image: img3,
+  //   href: "https://github.com/agastya18",
+  // },
 ];
 
 function Headpage() {
