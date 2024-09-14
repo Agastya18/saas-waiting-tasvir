@@ -10,6 +10,7 @@ import img3 from './img/got.png'
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import shortid from "shortid";
 
 import {
   AnimatePresence,
@@ -27,7 +28,7 @@ const people = [
     name: "JOIN NOW",
     designation: "How bout u join my fuqin waitlist 😂",
     image: img1,
-    href: "https://instagram.com/Joscriptt ",
+    href: "https://instagram.com/agastyagaur7",
   },
 ];
 
@@ -88,11 +89,23 @@ function PageHook() {
   };
 
   const onSubmit = async (data) => {
+    //console.log(data);
+  
+    console.log(data  )
+    const waitlist_id = 12345;
+    const joiner={
+      email:data.email,
+      waitlist_id:12345
+    }
     try {
-      let res = await fetch("/api/email", {
+      let res = await fetch("https://api.getwaitlist.com/api/v1/signup", {
         method: "POST",
-        body: JSON.stringify(data.email),
+        headers: {
+        "Content-Type": "application/json",
+      },
+        body: JSON.stringify(joiner),
       });
+      console.log(res);
       if (res.ok) {
         reset();
         handleOpenModel();
@@ -354,7 +367,7 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
                     height={5}
                     className="w-5"
                     src={img2}
-                    alt=""
+                    alt="img2"
                   />
                 </button>
               </div>
@@ -394,7 +407,7 @@ const RecievedModal = ({ isOpenModel, setIsOpenModel }) => {
               height={100}
               className="w-16 absolute right-0 -top-16"
               src={img2}
-              alt=""
+              alt="imgs"
             />
             <h1 className="text-3xl font-InterBold text-center">
               You're on the waitlist
@@ -415,7 +428,7 @@ const RecievedModal = ({ isOpenModel, setIsOpenModel }) => {
                     width={7}
                     height={7}
                     className="w-7"
-                    src='./img/got.png'
+                    src={img3}
                     alt="img2"
                   />
                 </button>
