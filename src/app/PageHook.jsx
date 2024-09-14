@@ -194,7 +194,7 @@ function PageHook() {
           <div className="w-full   space-y-2 ">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col    mt-5 lg:flex-row mx-auto lg:space-x-2 max-w-lg"
+              className="flex flex-col  mt-5 lg:flex-row mx-auto lg:space-x-2 max-w-lg"
             >
            
 
@@ -357,8 +357,8 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
             <div className="relative z-10">
               <p className="lg:text-justify  leading-6 mb-6">
               <p>🎉 Exciting Giveaway Alert! 🎉</p>
-              We're launching our brand-new Product, and to celebrate, we're giving you the chance to win BIG! Simply sign up today—it takes just one click and a few seconds—and you'll automatically be entered into our giveaway!
-✨ 10 lucky winners will get FREE access, and another 10 will score a 50% discount, absolutely free!
+              We're launching our brand-new Product, and to celebrate, we're giving you the chance to win BIG! Simply Join up today, it takes just one click and a few seconds and you'll automatically be entered into our giveaway!
+✨ 10 initial lucky winners will get FREE access*, and another 10 will score a 50% discount!
 
               </p>
               <div className="flex gap-2">

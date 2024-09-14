@@ -7,9 +7,10 @@ import img2 from '../img/xx.png'
 import img3 from '../img/github.png'
 import Link from "next/link";
 import Image from "next/image";
-import logo from '../img/logo.png'
+import logo from '../img/logo2.png'
+import logo1 from '../img/logo.png'
 import { useTheme } from "next-themes";
-
+import logot from '../img/logot.gif'
 import {
   PiTwitterLogoThin,
   PiInstagramLogoThin,
@@ -147,8 +148,14 @@ function Headpage() {
       <div className="flex justify-between md:max-w-5xl max-w-lg mx-auto lg:mt-16 mt-11 md:px-8 px-9">
         <div className="flex gap-x-3 items-center">
         <p className="text-sm text-white hidden md:block">
-           <Image src={logo} alt="" className="  w-16 h-16"/>
+           <Image src={logo} alt="" className="  w-24  h-11 "/>
+           
           </p>
+          <p className="text-sm text-white  md:hidden ">
+           <Image src={logo1} alt="" className="   w-12  "/>
+           
+          </p>
+          {/* <Image src={logot} className=" w-20 h-20"/> */}
           {/* <Switch checked={checked} setChecked={setChecked} /> */}
           
         </div>
@@ -166,7 +173,7 @@ function Headpage() {
           ))}
         </div> */}
 
-        <div className="flex flex-row gap-x-4  ">
+        <div className="flex flex-row gap-x-4  mr-8  ">
           {people.map((testimonial, idx) => (
             <div
               className=" relative group"
