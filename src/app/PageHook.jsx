@@ -297,7 +297,7 @@ function PageHook() {
           </div>
           <div className="p-3 rounded-lg border dark:border-white/10 border-neutral-400 dark:border-opacity-10 relative top-14 sm:top-14 lg:top-24 max-w-xl mx-auto flex flex-col lg:flex-row justify-between items-center text-sm">
             <p className=" text-zinc-500 dark:text-zinc-100">
-            Don't miss out something amazing comming soon!
+            Read T&C for something amazing comming soon!
             </p>
             <Link
               onClick={() => setIsOpen(true)}
